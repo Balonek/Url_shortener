@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Short URL{% endblock %}
+
+{% block content %}
+    <h1>
+        <a href="http://127.0.0.1:8000/{{ short_url_display }}" target="_blank">
+            http://127.0.0.1:8000/{{ short_url_display }}
+        </a>
+    </h1>
+    <a href="/">BACK TO HOME</a>
+{% endblock %}

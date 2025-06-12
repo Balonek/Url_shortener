@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Shorten URL{% endblock %}
+{% block content %}
+<form action="/api/shorten" method="post">
+  <div class="form-group">
+    <label>Enter an https:// URL</label>
+    <input class="form-control" type="url" name="url"
+           placeholder="https://example.com"
+           pattern="https://.*" required>
+  </div>
+  <button class="btn btn-primary">Shorten</button>
+</form>
+{% endblock %}
+    

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}All URLs{% endblock %}
+{% block content %}
+{% for url in vals %}
+  <p><b>{{ url.short }}</b> → {{ url.long }} ({{ url.accessCount }} clicks)</p>
+{% else %}
+  <p>No URLs yet.</p>
+{% endfor %}
+{% endblock %}
