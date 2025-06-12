@@ -62,8 +62,6 @@ uvicorn main:app --reload
 | `http://127.0.0.1:8000/`     | Formularz HTML do skracania linków |
 | `http://127.0.0.1:8000/docs` | Swagger UI / OpenAPI               |
 
-> Parametr `--reload` włącza automatyczny restart serwera przy zmianach w kodzie – przydatne w trakcie developmentu.
-
 ---
 
 \## API
