@@ -26,7 +26,7 @@ def list_all(request: Request):
 @app.post("/api/shorten", status_code=status.HTTP_201_CREATED)
 def create(url: str = Form(...)):        
     if not utils.is_valid_url(url):
-        raise HTTPException(status_code=400, "Invalid URL")
+        raise HTTPException(status_code=400, detail="Invalid URL")
     doc = mongo.save(url)
     return RedirectResponse(url=f"/display/{doc['short']}", status_code=303)
 
